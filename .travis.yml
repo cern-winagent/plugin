@@ -1,14 +1,14 @@
 language: csharp
 solution: plugin.sln
 before_deploy:
-  - sha1sum plugin/bin/Release/plugin.dll > plugin/bin/Release/plugin.dll.sha1
+- sha1sum plugin/bin/Release/plugin.dll > plugin/bin/Release/plugin.dll.sha1
 deploy:
   provider: releases
   api_key:
-    secure: qcl4R9gSiNh1N4Rmfao83MUCRk7j18Gkfovy4avjkxYNmlklNTk+WcG8f3MWBFUZZczJf+2dia94z2BcBe08JiymvUAIXBKNJ0vLnYxm59jLvRECV4EL/41+gZpVuKiTbMScy3b6JmHizjXqdTjYT7raxVS1qx7snTLLhyCZRP2m78P6pEhW7WJNEGpNWd29TVnqFiFcOJSfm2RT4+xLEpNMFZsp1wrRMY1eqt7Vm1CftAb25z3dhRwEl+i+b0NCgXV6hX3Ot+sDOf3AUM0jit+VGmq7ING8PumAfHUkJGKzXCPSUR5KN2i3+RfLiQlU5lK9E5w+34bmXhS+J/EJbqZqCobA/ga3syp00Gk+htfoul0Fk/XKuHWQYZD+ve8FSuiBTOGzAxzFbxpCDz0U9YGJmlEIuHP5THZcmRqYMwXnQ3RSm6FksiFYFrZ0rshBZbEJU8N9SzDSvkmlccIygG9qhHrOm1Dp6VBfYWeEDt5SfOfN0t6C3+SJDuEVrrnX/M2X6QoT6zkBpnNnjnZ78LsG5zWkZWu/SgAMaN649phS3YrO83v+k7Xj1BZECLFCtvz+NG0kCNVEcjc/Wu0tHQop7eUQg+4bSrg+Ul1wJWjrJZ20+Ux7+Ykt7++B6AtTdSxQyLcaftC9dc4ApBMj8AHPxSW8aUBiJj641WZ/KM8=
-  file: 
-    - plugin/bin/Release/plugin.dll
-    - plugin/bin/Release/plugin.dll.sha1
+    secure: Yv0+wQgvMMgUKldhX8DwzB3JBhXumBBShnEliwFrEv7uHtYCjpmdlvPCwJHaRwS5uXwVNzL+lJ4Yq5yu8lhELf1P/OglbM4rwAKLOCCBGQOYlvcf9Q2cYWgF5d6kOrlquY6+36zEUXuBB4fOVwhaToDk+ih0H+HQRv1a8zjLsahAwRNy2iYYnYxmRa21GdXcPFVsppNCmo65E2ud+w4sItsDHjTbZdjNPVCYSFVlHLY54WYuX9dmSUele87Xw9c8QFtTueQb1bpd/xgO3jZrAlIArMzDUnZqpuiqYR1TEfk2lXeiLiCEe+VmmIi8Kq44/6K/l/RogTiSXFXQ4viD3k9gq/RWPPW7S4FQty7VsATN01nSTt2saZRt6hX2Sswh0Sc7K7DlWPrEV1oMdSmUkJy5bSdDIlOeyI0Unu6bkKWtdNSPALz8sYLwjd/NZ5FVxVeqcpbDlbNsXibH7x9ux3KHGZ0PHNDntg8ELm/7MHBnwx7WL3WqoVWqDKMe+EIAxEadJ2SzymZ2gwIpwfGAQaMO85+91iXNRExZfHjx2szpQbP0SpIIyaEz64vOvv0sgCvsF3pgJy8XhdomHanLtDQtj8g+TEkxx+749d7+HlvkrzoI5Rozl7HZDfdfc8p7ZiR03sgImJkIg+GrgfHy2QvNPngeJgHbEfXAsGBhjtQ=
+  file:
+  - plugin/bin/Release/plugin.dll
+  - plugin/bin/Release/plugin.dll.sha1
   skip_cleanup: true
   on:
     repo: cern-winagent/plugin
