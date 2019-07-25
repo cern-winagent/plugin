@@ -3,7 +3,7 @@ stages:
   - release
 
 variables:
-  binary_extension: "dll"
+  assembly_extension: "dll"
 
 compilation:
   stage: compile
@@ -12,11 +12,11 @@ compilation:
   script:
     - msbuild /p:VersionAssembly=$env:CI_COMMIT_TAG /p:Configuration=Release $env:CI_PROJECT_NAME.sln
   after_script:
-    - (Get-FileHash $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:BINARY_EXTENSION -Algorithm SHA1).Hash > $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:BINARY_EXTENSION.sha1
+    - (Get-FileHash $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:ASSEMBLY_EXTENSION -Algorithm SHA1).Hash > $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:ASSEMBLY_EXTENSION.sha1
   artifacts:
     paths:
-      - $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:BINARY_EXTENSION
-      - $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:BINARY_EXTENSION.sha1
+      - $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:ASSEMBLY_EXTENSION
+      - $env:CI_PROJECT_NAME/bin/Release/$env:CI_PROJECT_NAME.$env:ASSEMBLY_EXTENSION.sha1
     expire_in: 1 year
 
 # This needs to be changed by GitLab
