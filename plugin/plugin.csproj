@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="IInputPlugin.cs" />
     <Compile Include="IOutputPlugin.cs" />
+    <Compile Include="MessageEventArgs.cs" />
     <Compile Include="PluginAttribute.cs" />
     <Compile Include="PluginDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
